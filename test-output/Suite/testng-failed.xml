@@ -4,15 +4,20 @@
   <listeners>
     <listener class-name="frameWorkPackages.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Error Validation Test(failed)">
+  <test thread-count="5" name="Submit Order Test(failed)">
+    <groups>
+      <run>
+        <include name="Purchase"/>
+      </run>
+    </groups>
     <classes>
-      <class name="frameWorkPackages.Test.ErrorValidationTest">
+      <class name="frameWorkPackages.Test.SubmitOrderTest">
         <methods>
-          <include name="LoginErrorValidation"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="submitOrder" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- frameWorkPackages.Test.ErrorValidationTest -->
+      </class> <!-- frameWorkPackages.Test.SubmitOrderTest -->
     </classes>
-  </test> <!-- Error Validation Test(failed) -->
+  </test> <!-- Submit Order Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

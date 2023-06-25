@@ -37,7 +37,7 @@ public class BaseTest {
 		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			 driver = new ChromeDriver();
 		}
 		else if (browserName.equalsIgnoreCase("edge"))
@@ -69,7 +69,7 @@ public class BaseTest {
 	public Object[][] getDataFromExcel() throws IOException
 	{
 		DataFormatter formatter = new DataFormatter();
-		String File = "C:\\Automation_FrameWork\\ExcelDriven.xlsx";
+		String File = "C:\\New\\Automation-FrameWork\\ExcelDriven.xlsx";
 		FileInputStream fis = new FileInputStream(File);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheetAt(0);
